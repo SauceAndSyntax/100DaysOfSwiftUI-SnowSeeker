@@ -9,9 +9,10 @@ import Foundation
 
 class Favorites: ObservableObject {
     private var resorts: Set<String>
+    private var favoriteFile = "Favorites"
     
     init() {
-        resorts = FileManager.loadData()
+        resorts = FileManager.loadData(from: favoriteFile)
     }
     
     func contains(_ resort: Resort) -> Bool {
@@ -21,13 +22,13 @@ class Favorites: ObservableObject {
     func add(_ resort: Resort) {
         objectWillChange.send()
         resorts.insert(resort.id)
-        FileManager.saveData(contentOf: resorts)
+        FileManager.saveData(contentOf: resorts, to: favoriteFile)
     }
     
     func remove(_ resort: Resort) {
         objectWillChange.send()
         resorts.remove(resort.id)
-        FileManager.saveData(contentOf: resorts)
+        FileManager.saveData(contentOf: resorts, to: favoriteFile)
     }
 
 }

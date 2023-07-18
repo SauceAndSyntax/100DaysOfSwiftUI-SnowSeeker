@@ -8,7 +8,7 @@
 import Foundation
 
 extension FileManager {
-    static let favoritesSavedPath = FileManager.documentDirectory.appendingPathComponent("Favorites")
+    static let docPath = FileManager.documentDirectory
 
     
     static var documentDirectory: URL {
@@ -16,8 +16,8 @@ extension FileManager {
         return paths[0]
     }
         
-    static func loadData<T: Decodable>() -> Set<T> {
-        if let data = try? Data(contentsOf: FileManager.favoritesSavedPath) {
+    static func loadData<T: Decodable>(from pathComponent: String) -> Set<T> {
+        if let data = try? Data(contentsOf: FileManager.docPath.appendingPathComponent(pathComponent)) {
             if let decoded = try? JSONDecoder().decode(Set<T>.self, from: data) {
                 return decoded
             }
@@ -25,11 +25,10 @@ extension FileManager {
         return Set<T>()
     }
     
-    static func saveData<T: Encodable>(contentOf favorites: Set<T>) {
-        if let data = try? JSONEncoder().encode(favorites) {
-            try? data.write(to: FileManager.favoritesSavedPath, options: [.atomic, .completeFileProtection])
+    static func saveData<T: Encodable>(contentOf content: Set<T>, to pathComponent: String) {
+        if let data = try? JSONEncoder().encode(content) {
+            try? data.write(to: FileManager.docPath.appendingPathComponent(pathComponent), options: [.atomic, .completeFileProtection])
         }
     }
-
     
 }
