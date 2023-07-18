@@ -207,5 +207,41 @@
 			"Accommodation",
 			"Eco-friendly"
 		]
-	}
+	},
+    {
+        "id": "arosa-lenzerheide",
+        "name": "Arosa Lenzerheide",
+        "country": "Switzerland",
+        "description": "Arosa Lenzerheide is a ski area located in Arosa, Lenzerheide, Valbella, Parpan and Churwalden, Graubünden/Switzerland. It originated 2013/14 by connecting the existing ski areas of Arosa and Lenzerheide. With a total of 225 kilometers (140 miles) of ski slopes and 43 cable cars it is the largest contiguous ski area in Graubünden.\n\nArosa Lenzerheide is located in northern and central Grisons. It extends from the innermost Schanfigg via Urdental to the neighboring western valley with Lenzerheide, Parpan–Valbella and Churwalden. The ski area covers an altitudinal range of 1,230 to 2,865 m (4,035 to 9,400 ft). Outstanding summits with aerial tramways and panoramic restaurants are the Weisshorn and the Parpaner Rothorn which also marks the highest point of the ski area. 60 per cent of the slopes are groomed with artificial snow.",
+        "imageCredit": "Oleg Smirnov",
+        "price": 3,
+        "size": 2,
+        "snowDepth": 100,
+        "elevation": 2865,
+        "runs": 132,
+        "facilities": [
+            "Family",
+            "Cross-country",
+            "Beginners",
+            "Accommodation",
+            "Eco-friendly"
+        ]
+    },
+    {
+        "id": "flumserberg",
+        "name": "Flumserberg",
+        "country": "Switzerland",
+        "description": "Flumserberg is a resort area in the Swiss Alps, located in the canton of St. Gallen. It is composed of several villages at elevations between 1,160 and 1,344 metres (3,806 and 4,409 ft) above sea level. The resort sits on a terrace overlooking the Walensee, above Flums in the Sarganserland region. Flumserberg mainly belongs to the municipality of Flums, with a small part belonging to the municipality of Quarten.",
+        "imageCredit": "Rich Morgan",
+        "price": 2,
+        "size": 2,
+        "snowDepth": 130,
+        "elevation": 2222,
+        "runs": 67,
+        "facilities": [
+            "Family",
+            "Beginners",
+            "Accommodation"
+        ]
+    }
 ]
