@@ -26,7 +26,6 @@ struct ContentView: View {
                             .resizable()
                             .scaledToFill()
                             .frame(width: resort.flagRatio == .rectangular ? 40 : 25, height: 25)
-                            //.frame(width: 40, height: 25)
                             .clipShape(RoundedRectangle(cornerRadius: 5))
                             .overlay() {
                                 RoundedRectangle(cornerRadius: 5)
