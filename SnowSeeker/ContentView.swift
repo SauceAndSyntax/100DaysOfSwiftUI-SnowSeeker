@@ -25,12 +25,14 @@ struct ContentView: View {
                         Image(resort.country)
                             .resizable()
                             .scaledToFill()
-                            .frame(width: 40, height: 25)
+                            .frame(width: resort.flagRatio == .rectangular ? 40 : 25, height: 25)
+                            //.frame(width: 40, height: 25)
                             .clipShape(RoundedRectangle(cornerRadius: 5))
                             .overlay() {
                                 RoundedRectangle(cornerRadius: 5)
                                     .stroke(.black, lineWidth: 1)
                             }
+                            .padding(.horizontal, resort.flagRatio == .square ? 7.5 : 0)
                         
                         VStack(alignment: .leading) {
                             Text(resort.name)
